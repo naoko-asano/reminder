@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/frontend/Dockerfile
+    command: yarn dev
     volumes:
       - ./frontend:/frontend
     ports:
