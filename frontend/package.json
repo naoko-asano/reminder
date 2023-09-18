@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "format:check": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "lint:check": "tsc --noEmit && next lint --max-warnings=0",
+    "lint:fix": "next lint --max-warnings=0 --fix"
   },
   "dependencies": {
     "@types/node": "20.5.9",
