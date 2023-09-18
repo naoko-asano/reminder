@@ -1,0 +1,29 @@
+name: check-frontend
+on:
+  push: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: frontend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.17.1"
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Check Format
+        run: yarn format:check
+
+      - name: Check Lint
+        run: yarn lint:check
