@@ -1,6 +1,8 @@
 name: check-frontend
 on:
-  push: [push]
+  pull_request:
+    paths:
+      - "frontend/**"
 jobs:
   check:
     runs-on: ubuntu-latest
