@@ -30,5 +30,8 @@ jobs:
       - name: Check Lint
         run: yarn lint:check
 
+      - name: Check Stylelint
+        run: yarn stylelint:check
+
       - name: Run Test
         run: yarn test --ci --colors
