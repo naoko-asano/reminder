@@ -1,8 +1,6 @@
-name: check-frontend
-on:
-  pull_request:
-    paths:
-      - "frontend/**"
+name: quality inspection
+on: pull_request
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -10,7 +8,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: frontend
 
     steps:
       - name: Checkout
@@ -19,7 +16,7 @@ jobs:
       - name: Set Up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18.17.1"
+          node-version-file: .node-version
 
       - name: Install Dependencies
         run: yarn install
