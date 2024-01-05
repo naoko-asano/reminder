@@ -14,7 +14,8 @@
     "stylelint:fix": "stylelint --fix \"**/*.{css,scss}\"",
     "test": "jest",
     "db:migrate": "dotenv -e .env.development.local prisma migrate dev",
-    "db:client:refresh": "dotenv -e .env.development.local prisma generate"
+    "db:client:refresh": "dotenv -e .env.development.local prisma generate",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.7.1",
