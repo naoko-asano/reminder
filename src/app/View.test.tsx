@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { View } from "./page";
+import { View } from "./View";
 
 test("Hello Worldが表示されている", async () => {
   const { getByText } = render(<View users={[]} />);
