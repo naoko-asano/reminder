@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 interface User {
-  id: string;
+  id: number;
   name: string | null;
 }
 

@@ -7,6 +7,6 @@ test("Hello Worldが表示されている", async () => {
 });
 
 test("ユーザー名が表示される", () => {
-  const { getByText } = render(<View users={[{ id: "aa", name: "Alice" }]} />);
+  const { getByText } = render(<View users={[{ id: 1, name: "Alice" }]} />);
   expect(getByText("Alice")).toBeInTheDocument();
 });
